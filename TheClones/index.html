@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <title>The Clones</title>
+        <meta name="author" content="Jacob Guglielmin">
+		<link href="css/main.css" rel="stylesheet">
+	</head>
+	<body class="no-select"> 
+        <div id="tooltip" class="hidden">
+            <p id="tooltipTitle"></p>
+            <hr>
+            <span id="tooltipInfo"></span>
+            <hr>
+            <span id="tooltipCost"></span>
+        </div>
+        <div id="header">
+            <!-- Settings buttons are displayed right to left on the right side of the window -->
+            <button id="save" class="settingsButton" onmousedown="save('localStorage')">Save</button>
+            <button id="export" class="settingsButton" onmousedown="tooltip('save')">Export</button>
+            <button id="import" class="settingsButton" onmousedown="tooltip('load')">Import</button>
+        </div>
+        <div id="home">
+            <div id="left">
+                <div id="resourcesContainer">
+                    <table id="actionTable" class="hidden">
+                        <tbody>
+                            <tr id="actionContainer">
+                                <td>
+                                    <button id="actionButton" onmousedown="action(0)">Search the Room</button>
+                                </td>
+                                <td>
+                                    <div class="progressBarOuter">
+                                        <div id="actionProgressBar" class="progressBarInner" style="width:0%;"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="right">
+                <div id="story"></div>
+            </div>
+        </div>
+        <script src="js/lz-string.js"></script>
+        <script src="js/tooltip.js"></script>
+        <script src="js/imp-exp.js"></script>
+        <script src="js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,164 @@
+body {
+    background-color: #272823;
+    font-family: sans-serif;
+    color: #EEE;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-size: 2.7vh;
+}
+
+@font-face {
+    font-family: sansMonospace;
+    src: url(../fonts/Hack-Regular.ttf);
+}
+
+button {
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #EEE;
+    color: #EEE;
+    cursor: pointer;
+    font-size: 2.7vh;
+    margin-right: 20px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    color: #999;
+    border: 1px solid #999;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+button:disabled:hover {
+    color:#EEE;
+    border: 1px solid #EEE;
+}
+
+h3 {
+    display: inline-block;
+}
+
+#tooltip {
+    position: absolute;
+    z-index: 10;
+    width: 300px;
+    border: 2px solid #EEE;
+    padding: 5px;
+    background-color: #272823;
+}
+
+#tooltip > hr {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    color: #EEE;
+}
+
+#tooltipTitle {
+    text-align: center;
+    font-size: 15pt;
+    margin: 0;
+    padding: 5px;
+}
+
+#tooltipInfo, #tooltipCost {
+    font-size: 11pt;
+}
+
+#header {
+    height: 10vh;
+    width: 100vw;
+}
+
+#left {
+    top: 10vh;
+    width: 50vw;
+    height: 90vh;
+    float: left;
+}
+
+#resourcesContainer {
+    position: relative;
+    left: 3vw;
+    top: 2vh;
+    width: 45.5vw;
+}
+
+#right {
+    top: 10vh;
+    width: 50vw;
+    height: 90vh;
+    float: left;
+}
+
+
+#story {
+    position: relative;
+    left: 1.5vw;
+    top: 5vh;
+    height: 32vh;
+    width: 43.9vw;
+    border: 1px solid #EEE;
+    padding: 10px;
+    font-size: 2.5vh;
+    overflow-y: auto;
+}
+
+.headerButton {
+    height: 7vh;
+    width: 10vw;
+    margin-top: 1vh;
+    margin-left: 1vh;
+    margin-right: 0;
+    float: left;
+}
+
+.settingsButton {
+    height: auto;
+    width: auto;
+    float: right;
+    border: none;
+    padding: none;
+    margin-top: 3vh;
+}
+
+.settingsButton:hover {
+    text-decoration: underline;
+    border: none;
+}
+
+.number {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.progressBarOuter {
+    width: 25vw;
+    height: 4vh;
+    border-radius: 1vh;
+    background-color: #BBB;
+}
+
+.progressBarInner {
+    height: inherit;
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+    border-right: 2px solid #000;
+    background-color: #2B0;
+    transition: width 0.2s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-select {
+    user-select: none;
+}
