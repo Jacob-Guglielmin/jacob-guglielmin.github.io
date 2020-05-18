@@ -23,9 +23,9 @@
         <div id="home">
             <div id="left">
                 <div id="resourcesContainer">
-                    <table id="actionTable" class="hidden">
+                    <table id="actionTable">
                         <tbody>
-                            <tr id="actionContainer">
+                            <tr id="actionContainer" class="hidden">
                                 <td>
                                     <button id="actionButton" onmousedown="action(0)">Search the Room</button>
                                 </td>
@@ -37,10 +37,39 @@
                             </tr>
                         </tbody>
                     </table>
+                    <table id="resourcesTable">
+                        <tbody>
+                            <tr id="metalContainer" class="hidden">
+                                <td>
+                                    <button id="metalButton" onmousedown="incrementResource('metal')">Disassemble a Machine</button>
+                                </td>
+                                <td>Scrap Metal:</td>
+                                <td class="number">
+                                    <span id="metalTotal">0</span>
+                                </td>
+                                <td id="metalMaxContainer" class="number hidden">
+                                    Max:
+                                    <span id="metalMax">100</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div id="right">
                 <div id="story"></div>
+                <div id="purchaseContainer" class="hidden">
+                    <div id="purchaseTabs" class="tabs">
+                        <button id="buildingsButton" class="tabButton currentTab" onmousedown="switchTabs(0, 1)">Fabrication</button>
+                        <button id="upgradesButton" class="tabButton hidden" onmousedown="switchTabs(1, 1)">Upgrades</button>
+                    </div>
+                    <div id="buildings">
+                        <button id="generatorButton" class="purchase" onmouseover="tooltip('generator', event)" onmousemove="tooltip('generator', event)" onmouseout="tooltip('hide')" onmousedown="build('generator', 1)">Generator</button>
+                        <button id="spearButton" class="purchase hidden" onmouseover="tooltip('spear', event)" onmousemove="tooltip('spear', event)" onmouseout="tooltip('hide')" onmousedown="build('spear', 1)">Spear</button>
+                        <button id="crateButton" class="purchase hidden" onmouseover="tooltip('crate', event)" onmousemove="tooltip('crate', event)" onmouseout="tooltip('hide')" onmousedown="build('crate', 1)">Crate<br>0</button>
+                    </div>
+                    <div id="upgrades" class="hidden"></div>
+                </div>
             </div>
         </div>
         <script src="js/lz-string.js"></script>

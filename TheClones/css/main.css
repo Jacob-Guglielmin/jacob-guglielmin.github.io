@@ -14,13 +14,13 @@ body {
 }
 
 button {
-    width: 200px;
+    width: 16vw;
     height: 30px;
     background-color: transparent;
     border: 1px solid #EEE;
     color: #EEE;
     cursor: pointer;
-    font-size: 2.7vh;
+    font-size: 1.2vw;
     margin-right: 20px;
 }
 
@@ -34,12 +34,15 @@ button:hover {
 }
 
 button:disabled {
+    color:#737373;
+    border: 1px solid #737373;
     cursor: default;
 }
 
 button:disabled:hover {
-    color:#EEE;
-    border: 1px solid #EEE;
+    color:#737373;
+    border: 1px solid #737373;
+    cursor: default;
 }
 
 h3 {
@@ -111,6 +114,18 @@ h3 {
     overflow-y: auto;
 }
 
+#purchaseContainer {
+    position: relative;
+    left: 1.5vw;
+    top: 10vh;
+    width: calc(43.9vw + 20px);
+    height: 39vh;
+    border: 1px solid #EEE;
+    background-color: #35372F;
+    padding: 0;
+    margin: 0;
+}
+
 .headerButton {
     height: 7vh;
     width: 10vw;
@@ -134,11 +149,6 @@ h3 {
     border: none;
 }
 
-.number {
-    text-align: right;
-    padding-right: 20px;
-}
-
 .progressBarOuter {
     width: 25vw;
     height: 4vh;
@@ -153,6 +163,51 @@ h3 {
     border-right: 2px solid #000;
     background-color: #2B0;
     transition: width 0.2s ease;
+}
+
+.tabs {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 45.5vw;
+    height: 6vh;
+    background-color: #272823;
+}
+
+.tabButton {
+    position: relative;
+    width: 50%;
+    height: inherit;
+    float: left;
+    margin-right: 0;
+    border: 1px solid #EEE !important;
+}
+
+.currentTab {
+    background-color: #35372F !important;
+}
+
+.purchase {
+    position: relative;
+    width: 13.25vw;
+    height: 10vh;
+    font-size: 2.5vh;
+    line-height: 3.75vh;
+    margin-left: 1.1vw;
+    margin-top: 20px;
+    margin-right: 0px;
+    float: left;
+}
+
+.number {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.disabled {
+    color:#737373 !important;
+    border: 1px solid #737373 !important;
+    cursor: default;
 }
 
 .hidden {
