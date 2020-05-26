@@ -34,6 +34,8 @@ button:hover {
 }
 
 button:disabled {
+    width: 16vw;
+    height: 30px;
     color:#737373;
     border: 1px solid #737373;
     cursor: default;
@@ -92,6 +94,34 @@ h3 {
     left: 3vw;
     top: 2vh;
     width: 45.5vw;
+    height: 25.3vh;
+}
+
+/* TODO Set this height? width? better */
+#clonesContainer {
+    position: relative;
+    left: 3vw;
+    top: 10vh;
+    width: 45.5vw;
+    height: 49.55vh;
+    border: 1px solid #EEE;
+    background-color: #35372F;
+    padding: 0;
+    margin: 0;
+}
+
+#totalClonesContainer {
+    padding: 10px;
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    padding-bottom: 0;    
+}
+
+#unemployedClonesContainer {
+    float: right;
+    padding: 10px;
+    padding-bottom: 0;
 }
 
 #right {
@@ -141,11 +171,12 @@ h3 {
     float: right;
     border: none;
     padding: none;
+    text-decoration: line-through;
     margin-top: 3vh;
 }
 
 .settingsButton:hover {
-    text-decoration: underline;
+    text-decoration: underline line-through;
     border: none;
 }
 

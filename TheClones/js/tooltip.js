@@ -58,18 +58,18 @@ function tooltip(what, event, infoA, infoB){
             if (cost != "") {
                 cost = cost.substring(0, cost.length - 2);
             }
-        } else if (window.workers[what] && window.workers[what].tooltip.info) {
+        } else if (window.clones[what] && window.clones[what].tooltip.info) {
             title = what.charAt(0).toUpperCase() + what.slice(1);
-            info = window.workers[what].tooltip.info;
-            info += window.workers[what].benefit;
+            info = window.clones[what].tooltip.info;
+            info += window.clones[what].benefit;
 
-            if (window.workers[what].tooltip.info2) {
-                info += window.workers[what].tooltip.info2;
+            if (window.clones[what].tooltip.info2) {
+                info += window.clones[what].tooltip.info2;
             }
             
-            for (const i in window.workers[what].requires) {
-                if (window.workers[what].requires[i] != 0) {
-                    cost += window.resources[i].total + "/" + window.workers[what].requires[i] + " " + i.charAt(0).toUpperCase() + i.slice(1) + ", ";
+            for (const i in window.clones[what].requires) {
+                if (window.clones[what].requires[i] != 0) {
+                    cost += window.resources[i].total + "/" + window.clones[what].requires[i] + " " + i.charAt(0).toUpperCase() + i.slice(1) + ", ";
                 }
             }
             if (cost != "") {

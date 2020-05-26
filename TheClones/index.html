@@ -37,8 +37,38 @@
                             </tr>
                         </tbody>
                     </table>
+                    <table id="cloningTable">
+                        <tbody>
+                            <tr id="cloningContainer" class="hidden">
+                                <td>
+                                    <button id="cloneButton" onmousedown="makeClone()">Make a Clone</button>
+                                </td>
+                                <td>
+                                    <div class="progressBarOuter">
+                                        <div id="cloningProgressBar" class="progressBarInner" style="width:0%;"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <table id="resourcesTable">
                         <tbody>
+                            <tr id="powerContainer" class="hidden">
+                                <td>
+                                    <button id="powerButton" onmousedown="incrementResource('power')">Generate Power</button>
+                                </td>
+                                <td>Power:</td>
+                                <td class="number">
+                                    <span id="powerTotal">0</span>
+                                </td>
+                                <td class="number">
+                                    Max:
+                                    <span id="powerMax">100</span>
+                                </td>
+                                <td class="number">
+                                    <span id="powerNet">0.0</span>/s
+                                </td>
+                            </tr>
                             <tr id="metalContainer" class="hidden">
                                 <td>
                                     <button id="metalButton" onmousedown="incrementResource('metal')">Disassemble a Machine</button>
@@ -51,9 +81,42 @@
                                     Max:
                                     <span id="metalMax">100</span>
                                 </td>
+                                <td id="metalNetContainer" class="number hidden">
+                                    <span id="metalNet">0.0</span>/s
+                                </td>
+                            </tr>
+                            <tr id="scienceContainer" class="hidden">
+                                <td>
+                                    <button id="scienceButton" onmousedown="incrementResource('science')">Research</button>
+                                </td>
+                                <td>Science:</td>
+                                <td class="number">
+                                    <span id="scienceTotal">0</span>
+                                </td>
+                                <td class="number">
+                                    <span id="scienceNet">0.0</span>/s
+                                </td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div id="clonesContainer" class="hidden">
+                    <div id="clonesTabs" class="tabs">
+                        <button id="jobsButton" class="tabButton currentTab" onmousedown="switchTabs(0, 0)">Jobs</button>
+                        <button id="equipmentButton" class="tabButton hidden" onmousedown="switchTabs(1, 0)">Equipment</button>
+                    </div>
+                    <div id="jobs">
+                        <div id="totalClonesContainer">
+                            Total Clones:
+                            <span id="totalClones">0</span>
+                        </div>
+                        <div id="unemployedClonesContainer">
+                            Unemployed Clones:
+                            <span id="unemployedClones">0</span>
+                        </div>
+                        <button id="researcherButton" class="purchase" onmouseover="tooltip('researcher', event)" onmousemove="tooltip('researcher', event)" onmouseout="tooltip('hide')" onmousedown="hire('researcher', 1)">Researcher<br>0</button>
+                    </div>
+                    <div id="equipment" class="hidden"></div>
                 </div>
             </div>
             <div id="right">
