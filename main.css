@@ -37,6 +37,12 @@ a {
     text-shadow:1px 1px 0px #96f,2px 2px 0px #639,4px 4px 4px #000;
 }
 
+#subtitle {
+    font-size: 15px;
+    opacity: 0.75;
+    margin: 0;
+}
+
 .blurb {
     width: 100%;
     margin: 0;
@@ -55,7 +61,7 @@ a {
 
 #mainBox {
     display:grid;
-    grid-template: 50px 100px / 512px;
+    grid-template: 50px 18px 100px / 512px;
     gap: 10px 10px;
     margin: auto;
     color:rgba(0,0,0,0.9);
