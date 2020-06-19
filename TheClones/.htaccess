@@ -1,9 +1,0 @@
-# Removes filename from url, makes page accessible by just the folder name
-
-RewriteEngine on
-
-RewriteCond %{REQUEST_FILENAME} !-d
-
-RewriteCond %{REQUEST_FILENAME}\.html -f
-
-RewriteRule ^(.*)$ $1.html [NC,L]
