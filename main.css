@@ -4,7 +4,7 @@ body {
 }
 
 #page {
-    background: url(_img/shadedEdges.png),url(_img/blobsBg.jpg);
+    background: url(img/shadedEdges.png),url(img/blobsBg.jpg);
     background-size:100% 200%,auto;
     overflow: auto;
     display:grid;
